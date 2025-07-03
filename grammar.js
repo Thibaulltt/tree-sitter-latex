@@ -329,6 +329,14 @@ module.exports = grammar({
     curly_group_path_list: $ =>
       seq('{', sepBy(field('path', $.path), ','), '}'),
 
+    curly_group_path_quoted_list: $ =>
+      seq(
+        '{',
+        sepBy(field('path', choice($.path, seq('"', $.path, '"'))), ','),
+        optional(','),
+        '}'
+      ),
+
     curly_group_uri: $ => seq('{', field('uri', $.uri), '}'),
 
     curly_group_command_name: $ =>
@@ -635,6 +643,7 @@ module.exports = grammar({
         $.author_declaration,
         $.package_include,
         $.class_include,
+        $.latex_include_only,
         $.latex_include,
         $.biblatex_include,
         $.bibstyle_include,
@@ -715,6 +724,12 @@ module.exports = grammar({
         field('command', '\\documentclass'),
         field('options', optional($.brack_group_key_value)),
         field('path', $.curly_group_path),
+      ),
+
+    latex_include_only: $ =>
+      seq(
+        field('command', '\\includeonly'),
+        field('paths', $.curly_group_path_quoted_list),
       ),
 
     latex_include: $ =>

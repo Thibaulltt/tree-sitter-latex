@@ -460,6 +460,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -867,6 +871,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -1266,6 +1274,10 @@
         },
         {
           "type": "latex_include",
+          "named": true
+        },
+        {
+          "type": "latex_include_only",
           "named": true
         },
         {
@@ -2080,6 +2092,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -2374,6 +2390,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -2472,6 +2492,26 @@
         "multiple": true,
         "required": false,
         "types": [
+          {
+            "type": "path",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "curly_group_path_quoted_list",
+    "named": true,
+    "fields": {
+      "path": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "\"",
+            "named": false
+          },
           {
             "type": "path",
             "named": true
@@ -2606,6 +2646,10 @@
         },
         {
           "type": "latex_include",
+          "named": true
+        },
+        {
+          "type": "latex_include_only",
           "named": true
         },
         {
@@ -2865,6 +2909,10 @@
         },
         {
           "type": "latex_include",
+          "named": true
+        },
+        {
+          "type": "latex_include_only",
           "named": true
         },
         {
@@ -3175,6 +3223,10 @@
         },
         {
           "type": "latex_include",
+          "named": true
+        },
+        {
+          "type": "latex_include_only",
           "named": true
         },
         {
@@ -3563,6 +3615,10 @@
         },
         {
           "type": "latex_include",
+          "named": true
+        },
+        {
+          "type": "latex_include_only",
           "named": true
         },
         {
@@ -4258,6 +4314,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -4681,6 +4741,32 @@
     }
   },
   {
+    "type": "latex_include_only",
+    "named": true,
+    "fields": {
+      "command": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "\\includeonly",
+            "named": false
+          }
+        ]
+      },
+      "paths": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "curly_group_path_quoted_list",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "let_command_definition",
     "named": true,
     "fields": {
@@ -5066,6 +5152,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -5343,6 +5433,10 @@
         },
         {
           "type": "latex_include",
+          "named": true
+        },
+        {
+          "type": "latex_include_only",
           "named": true
         },
         {
@@ -5971,6 +6065,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -6258,6 +6356,10 @@
         },
         {
           "type": "latex_include",
+          "named": true
+        },
+        {
+          "type": "latex_include_only",
           "named": true
         },
         {
@@ -6671,6 +6773,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -6928,6 +7034,10 @@
         },
         {
           "type": "latex_include",
+          "named": true
+        },
+        {
+          "type": "latex_include_only",
           "named": true
         },
         {
@@ -7229,6 +7339,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -7527,6 +7641,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -7813,6 +7931,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -8089,6 +8211,10 @@
           },
           {
             "type": "latex_include",
+            "named": true
+          },
+          {
+            "type": "latex_include_only",
             "named": true
           },
           {
@@ -8496,6 +8622,10 @@
           "named": true
         },
         {
+          "type": "latex_include_only",
+          "named": true
+        },
+        {
           "type": "let_command_definition",
           "named": true
         },
@@ -8622,6 +8752,10 @@
   },
   {
     "type": "!",
+    "named": false
+  },
+  {
+    "type": "\"",
     "named": false
   },
   {
@@ -9593,6 +9727,10 @@
     "named": false
   },
   {
+    "type": "\\includeonly",
+    "named": false
+  },
+  {
     "type": "\\includesvg",
     "named": false
   },
@@ -9942,7 +10080,8 @@
   },
   {
     "type": "line_comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "path",

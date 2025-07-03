@@ -1270,6 +1270,104 @@
         }
       ]
     },
+    "curly_group_path_quoted_list": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "FIELD",
+                  "name": "path",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "path"
+                      },
+                      {
+                        "type": "SEQ",
+                        "members": [
+                          {
+                            "type": "STRING",
+                            "value": "\""
+                          },
+                          {
+                            "type": "SYMBOL",
+                            "name": "path"
+                          },
+                          {
+                            "type": "STRING",
+                            "value": "\""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ","
+                      },
+                      {
+                        "type": "FIELD",
+                        "name": "path",
+                        "content": {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "path"
+                            },
+                            {
+                              "type": "SEQ",
+                              "members": [
+                                {
+                                  "type": "STRING",
+                                  "value": "\""
+                                },
+                                {
+                                  "type": "SYMBOL",
+                                  "name": "path"
+                                },
+                                {
+                                  "type": "STRING",
+                                  "value": "\""
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "}"
+        }
+      ]
+    },
     "curly_group_uri": {
       "type": "SEQ",
       "members": [
@@ -4137,6 +4235,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "latex_include_only"
+        },
+        {
+          "type": "SYMBOL",
           "name": "latex_include"
         },
         {
@@ -4495,6 +4597,27 @@
           "content": {
             "type": "SYMBOL",
             "name": "curly_group_path"
+          }
+        }
+      ]
+    },
+    "latex_include_only": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "command",
+          "content": {
+            "type": "STRING",
+            "value": "\\includeonly"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "paths",
+          "content": {
+            "type": "SYMBOL",
+            "name": "curly_group_path_quoted_list"
           }
         }
       ]
@@ -7013,5 +7136,6 @@
     }
   ],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }
